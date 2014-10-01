@@ -33,15 +33,15 @@ function prompt_brett_setup {
   # Set vcs_info parameters.
   zstyle ':vcs_info:*' enable git
   zstyle ':vcs_info:*' check-for-changes true
-  zstyle ':vcs_info:*' stagedstr '%F{green}●%f'
-  zstyle ':vcs_info:*' unstagedstr '%F{red}●%f'
-  zstyle ':vcs_info:*' formats ' %F{white}[%F{yellow}%b%c%F{white}]%f %u'
+  zstyle ':vcs_info:*' stagedstr ' %F{green}●%f'
+  zstyle ':vcs_info:*' unstagedstr ' %F{red}●%f'
+  zstyle ':vcs_info:*' formats ' %F{white}[%F{yellow}%b%F{white}]%f%u'
   zstyle ':vcs_info:*' actionformats " - [%b%c%u|%F{cyan}%a%f]"
   zstyle ':vcs_info:*' branchformat '%b|%F{cyan}%r%f'
   zstyle ':vcs_info:git*+set-message:*' hooks git-status
 
   # Define prompts.
-  PROMPT='%F{blue}%2~%f${vcs_info_msg_0_} '
+  PROMPT='%F{blue}%2~%f${vcs_info_msg_0_} %F{blue}❯%f '
   RPROMPT=''
 }
 
