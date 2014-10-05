@@ -18,6 +18,8 @@ function prompt_brett_precmd {
   vcs_info
 }
 
+# TODO make the square brackets represent repo status
+
 function prompt_brett_setup {
   setopt LOCAL_OPTIONS
   unsetopt XTRACE KSH_ARRAYS
@@ -35,8 +37,8 @@ function prompt_brett_setup {
   zstyle ':vcs_info:*' check-for-changes true
   zstyle ':vcs_info:*' stagedstr ' %F{green}●%f'
   zstyle ':vcs_info:*' unstagedstr ' %F{red}●%f'
-  zstyle ':vcs_info:*' formats ' %F{white}[%F{yellow}%b%F{white}]%f%u'
-  zstyle ':vcs_info:*' actionformats " - [%b%c%u|%F{cyan}%a%f]"
+  zstyle ':vcs_info:*' formats ' %F{white}[%F{yellow}%b%f%c%u%F{white}]%f'
+  zstyle ':vcs_info:*' actionformats ' %F{white}[%F{yellow}%b%f%c%u%F{white}|%f%F{blue}%a%F{white}]%f'
   zstyle ':vcs_info:*' branchformat '%b|%F{cyan}%r%f'
   zstyle ':vcs_info:git*+set-message:*' hooks git-status
 
