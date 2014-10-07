@@ -19,6 +19,7 @@ function prompt_brett_precmd {
 }
 
 # TODO make the square brackets represent repo status
+#       indicate if I can contribute to the repo
 
 function prompt_brett_setup {
   setopt LOCAL_OPTIONS
